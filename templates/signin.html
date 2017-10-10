@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/signin" method="post">
+
+    Username:<br />
+    <input type="text" name="new-user" />
+    <br />
+    <p class="error">{{user_error}}</p>
+    <p class="error">{{user_error_char}}</p>
+    <p class="error">{{user_error_space}}</p>
+    <br />
+    Valid E-mail Address (optional):<br />
+    <input type="text" name="mail-me" />
+    <br />
+    <p class="error">{{e_error}}</p>
+    <p class="error">{{e_error_space}}</p>
+    <br />
+    Password:<br />
+    <input type="password" name="secret" />
+    <br />
+    <p class="error">{{pass_error}}</p>
+    <p class="error">{{pass_error_space}}</p>
+    <p class="error">{{pass_error_char}}</p>
+    <br />
+    Confirm Password:<br />
+    <input type="password" name="code" />
+    <br />
+    <p class="error">{{conf_error}}</p>
+    <br />
+    <input type="submit" value="Sign-in" />
+
+</form>
+
+
+
+{% endblock %}
